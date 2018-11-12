@@ -17,9 +17,9 @@ config :server, ServerWeb.Endpoint,
   load_from_system_env: true,
   https: [port: 8442,
   otp_app: :server,
-    keyfile: "/etc/letsencrypt/live/trinitymud.com/privkey.pem",
-    certfile: "/etc/letsencrypt/live/trinitymud.com/cert.pem"],
-  url: [host: "trinitymud.io", port: 8442],
+    keyfile: "/etc/letsencrypt/live/{YOUR SERVER HERE}.com/privkey.pem",
+    certfile: "/etc/letsencrypt/live/{YOUR SERVER HERE}.com/cert.pem"],
+  url: [host: "{YOUR SERVER HERE}.io", port: 8442],
     force_ssl: [rewrite_on: [:x_forwarded_proto]],
     cache_static_manifest: "priv/static/cache_manifest.json"
 

@@ -28,7 +28,7 @@ defmodule ServerWeb do
 
   def view do
     quote do
-      use Phoenix.View, root: "lib/trinity_web/templates",
+      use Phoenix.View, root: "lib/server_web/templates",
                         namespace: ServerWeb
 
       # Import convenience functions from controllers
