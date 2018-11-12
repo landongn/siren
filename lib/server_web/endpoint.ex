@@ -54,7 +54,3 @@ defmodule ServerWeb.Endpoint do
     end
   end
 end
-
-defmodule ServerWeb.Mailer do
-  use Bamboo.Mailer, otp_app: :server
-end
