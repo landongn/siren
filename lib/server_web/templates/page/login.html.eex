@@ -1,0 +1,47 @@
+<div class="site-container index">
+
+  <div class="logo">
+
+  </div>
+
+
+  <div class="nav">
+
+  </div>
+
+  <div class="header">
+    <pre>
+  /\
+ /__\   † R Î N Î † Y
+/____\
+
+</pre>
+  </div>
+
+  <div class="content">
+
+    <span class="title">Login</span>
+    <section class="signup-form">
+        <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
+        <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
+      <%= form_for @changeset, page_path(@conn, :login), fn f -> %>
+
+        <fieldset>
+          <section class="field">
+            <label for="email">Email Address</label>
+            <%= email_input f, :email, id: "email", autocomplete: "email-address", placeholder: "Email Address" %>
+          </section>
+          <aside class="form-error"><%= error_tag f, :email %></aside>
+
+          <section class="field">
+            <label for="password">Password</label>
+            <%= password_input f, :password, autocomplete: "new-password", type: "password", id: "password" %>
+          </section>
+          <aside class="form-error"><%= error_tag f, :password %></aside>
+        <%= submit "Login" %>
+      <% end %>
+    </section>
+  </div>
+
+
+</div>
