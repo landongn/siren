@@ -22,7 +22,7 @@ defmodule ServerWeb.UserSocket do
   #   end
   # end
 
-  # def id(socket), do: "user_socket:#{socket.assigns.user_id}"
+  def id(socket), do: "user_socket:#{socket.assigns.user_id}"
 
 
 end
