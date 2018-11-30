@@ -2,7 +2,7 @@ defmodule ServerWeb.UserSocket do
   use Phoenix.Socket
   require Logger
 
-  # channel "game:*", ServerWeb.MyChannel
+  # channel "mychan:*", ServerWeb.MyChannel
 
   transport :websocket, Phoenix.Transports.WebSocket
 

@@ -6,13 +6,11 @@ var browserify = require("browserify");
 var sourcemaps = require("gulp-sourcemaps");
 var fs = require("fs");
 var wait = require("gulp-wait");
+var mkdirp = require("mkdirp");
 
 gulp.task("js", function() {
   browserify("./js/app.js")
-    .transform("babelify", {
-      // presets: ["@babel/preset-env", "@babel/preset-react"],
-      // plugins: ["@babel/plugin-transform-react-jsx", { "pragma":"preact.h" }]
-    })
+    .transform("babelify", {})
     .bundle()
     .pipe(fs.createWriteStream("../priv/static/js/app.js"));
 });
@@ -34,6 +32,7 @@ gulp.task("styles", function() {
 gulp.task("default", ["js", "assets", "styles", "dev:watch"]);
 
 gulp.task("dev:watch", function() {
+  mkdirp("../priv/static/js");
   gulp.watch("./css/**/*.*", ["styles"]);
   gulp.watch("./js/**/*.js", ["js"]);
   gulp.watch("./static/**/*.*", ["assets"]);
