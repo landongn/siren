@@ -1,7 +1,10 @@
-# Server
+# Siren - A simple Phoenix/Preact bundle.
 
-To start your Phoenix server:
+- everything you need to write gui components is in assets/
+- everything you need to write a scalable, real time backend is in lib/
 
+## installing
+  * run `yarn install` from the `assets/` folder. 
   * Install dependencies with `mix deps.get`
   * Create and migrate your database with `mix ecto.create && mix ecto.migrate`
   * Start Phoenix endpoint with `mix phx.server`
